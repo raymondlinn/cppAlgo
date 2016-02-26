@@ -19,6 +19,7 @@ int fibonnaci_recursive(int n) {
 	return fibonnaci_recursive(n-1) + fibonnaci_recursive(n-2);
 }
 
+// Polynomial O(n)
 int fibonnaci(int n) {
 	int f[n +1];
 	int i;
@@ -31,7 +32,7 @@ int fibonnaci(int n) {
 	}
 	return f[n];
 }
-
+// Polynomial with space O(n)
 int fibonnaci_space(int n) {
 	int a = 0, b = 1, c, i;
 	if (n  == 0)
