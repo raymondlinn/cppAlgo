@@ -3,14 +3,10 @@
 // caller needs to make sure the orig has room for concantenating
 void strConcat(char* orig, char* add) {
 
-	int i = 0;
-
 	while(*orig) {
 		orig++;
-		i++;
 	}
 	
-
 	while(*add) {
 		*orig = *add;
 		orig++;
