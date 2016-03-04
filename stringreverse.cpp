@@ -1,27 +1,27 @@
 #include <iostream>
 
-char *strReverseInPointers(char *orgStr) {
+char  *strReverseInPointers(char *orgStr) {
 
 	int i = 0;
+	// cound the size strlen()
 	while(*orgStr){
 		*orgStr++;
 		i++;
 	}
 	// allocate the reverseStr
-	char *reverseStr = new char[i];
+	char *revStr = new char [i];
 	while (i >= 0) {
 		*orgStr--;
-		reverseStr = orgStr;
-		reverseStr++;
+		revStr = orgStr;
+		revStr++;
 		--i;
 	}
-	
-	return reverseStr;
+	return revStr;
 }
 
 int main() {
 
-	char *orgStr = "happyz";
+	char orgStr[] = "happyz";
 	char *revStr;
 
 	//std::cout << "Enter any String to be reversed:" << std::endl;
@@ -29,7 +29,7 @@ int main() {
 	revStr = strReverseInPointers(orgStr);
 	std::cout << "Reversed String is: " << revStr << std::endl;
 
-	delete [] revStr;
+	//delete [] revStr;
 
 	return 0;
 }
